@@ -1,0 +1,67 @@
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\appsettings.json
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Property Management.exe
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Property Management.deps.json
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Property Management.runtimeconfig.json
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Property Management.runtimeconfig.dev.json
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Property Management.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\ref\Property Management.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Property Management.pdb
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Humanizer.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.AspNet.Identity.Core.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\obj\Debug\net5.0\Property Management.csproj.AssemblyReference.cache
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\obj\Debug\net5.0\Property Management.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\obj\Debug\net5.0\Property Management.AssemblyInfoInputs.cache
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\obj\Debug\net5.0\Property Management.AssemblyInfo.cs
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\obj\Debug\net5.0\Property Management.csproj.CoreCompileInputs.cache
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\obj\Debug\net5.0\Property Management.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\obj\Debug\net5.0\Property Management.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\obj\Debug\net5.0\staticwebassets\Property Management.StaticWebAssets.Manifest.cache
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\obj\Debug\net5.0\staticwebassets\Property Management.StaticWebAssets.xml
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\obj\Debug\net5.0\scopedcss\bundle\Property Management.styles.css
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\obj\Debug\net5.0\Property Management.RazorTargetAssemblyInfo.cache
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\obj\Debug\net5.0\Property Management.csproj.CopyComplete
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\obj\Debug\net5.0\Property Management.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\obj\Debug\net5.0\ref\Property Management.dll
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\obj\Debug\net5.0\Property Management.pdb
+C:\Users\IanOmondi\source\repos\Property Management\Property Management\obj\Debug\net5.0\Property Management.genruntimeconfig.cache
