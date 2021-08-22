@@ -25,7 +25,17 @@ namespace Property_Management.Controllers
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
+
+            
         }
+
+        [HttpGet]
+        [Route("Usertest")]
+        public IActionResult Usertest()
+        {
+            return Ok("jjj");
+        }
+
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()

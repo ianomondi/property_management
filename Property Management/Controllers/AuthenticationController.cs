@@ -13,6 +13,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Property_Management.Models;
 
 namespace Property_Management.Controllers
 {
@@ -39,12 +40,15 @@ namespace Property_Management.Controllers
 
         public async Task<IActionResult> Register([FromBody] RegisterModel registerModel)
         {
+            ResponseModel responseModel = new ResponseModel { status=ResponseModel.StatusCodes.fail, message =Configs.defaultErrorMsg};
+
             var userExist = await userManager.FindByNameAsync(registerModel.username);
             if (userExist != null)
+            {
+                responseModel.message = Configs.user_exist_msg;
+                return StatusCode(StatusCodes.Status500InternalServerError, responseModel);
 
-            return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "Failed", message = "User Already Exists" });
-
-            
+            }
             
             ApplicationUser user = new ApplicationUser()
             {
@@ -58,12 +62,15 @@ namespace Property_Management.Controllers
 
             if (!result.Succeeded)
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "Failed", message = "User Not Created" });
+                responseModel.message = Configs.user_not_created_msg;
+                return StatusCode(StatusCodes.Status500InternalServerError, responseModel);
             }
 
             else
             {
-                return Ok(new Response { status = "Success", message = "User Created Successfully" });
+                responseModel.message = Configs.user_created_msg;
+                responseModel.status = ResponseModel.StatusCodes.success;
+                return Ok(responseModel);
             }
         }
 
@@ -72,9 +79,11 @@ namespace Property_Management.Controllers
 
         public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         {
+            ResponseModel response = new ResponseModel { status = ResponseModel.StatusCodes.fail , message= Configs.defaultErrorMsg};
             var user = await userManager.FindByNameAsync(loginModel.username);
             if(user != null && await userManager.CheckPasswordAsync(user, loginModel.password))
             {
+
                 var userRoles = await userManager.GetRolesAsync(user);
                 var authClaims = new List<Claim>
                 {
@@ -96,60 +105,88 @@ namespace Property_Management.Controllers
                         signingCredentials:new SigningCredentials(authSignInKey,SecurityAlgorithms.HmacSha256)
 
                     );
+                response.status = ResponseModel.StatusCodes.success;
+                response.message = Configs.login_successful_msg;
+                response.data = new { token = new JwtSecurityTokenHandler().WriteToken(token) };
                 return Ok
                     (
-                        new
-                        {
-                            token = new JwtSecurityTokenHandler().WriteToken(token)
-                            
-                        }
+                        response
                     );
             }
-            return Unauthorized();
+
+            response.message = Configs.login_failed_msg;
+
+            return StatusCode(StatusCodes.Status401Unauthorized, response);
+
+            //return Unauthorized();
         }
         [HttpPost]
         [Route("register_admin")]
 
         public async Task<IActionResult> RegisterAdmin([FromBody] RegisterModel registerModel)
         {
-            var userExist = await userManager.FindByNameAsync(registerModel.username);
-            if (userExist != null)
-
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "Failed", message = "User Already Exists" });
-
-
-
-            ApplicationUser user = new ApplicationUser()
+            ResponseModel response = new ResponseModel
             {
-                Email = registerModel.email,
-                SecurityStamp = Guid.NewGuid().ToString(),
-                UserName = registerModel.username
-
+                status = ResponseModel.StatusCodes.fail,
+                message = Configs.defaultErrorMsg
             };
 
-            var result = await userManager.CreateAsync(user, registerModel.password);
-
-            if (!result.Succeeded)
+            try
             {
-                return StatusCode(StatusCodes.Status500InternalServerError, new Response { status = "Failed", message = "User Not Created" });
+                var userExist = await userManager.FindByNameAsync(registerModel.username);
+                if (userExist != null)
+                {
+                    response.message = Configs.user_exist_msg;
+                    return StatusCode(StatusCodes.Status500InternalServerError, response);
+                }
+
+
+
+
+                ApplicationUser user = new ApplicationUser()
+                {
+                    Email = registerModel.email,
+                    SecurityStamp = Guid.NewGuid().ToString(),
+                    UserName = registerModel.username
+
+                };
+
+                var result = await userManager.CreateAsync(user, registerModel.password);
+
+                if (!result.Succeeded)
+                {
+                    response.message = Configs.user_not_created_msg;
+
+                    return StatusCode(StatusCodes.Status500InternalServerError, response);
+                }
+
+                else
+                {
+                    if (!await roleManager.RoleExistsAsync(UserRoles.Admin))
+                    {
+                        await roleManager.CreateAsync(new IdentityRole(UserRoles.Admin));
+                    }
+                    if (!await roleManager.RoleExistsAsync(UserRoles.User))
+                    {
+                        await roleManager.CreateAsync(new IdentityRole(UserRoles.User));
+                    }
+                    if (await roleManager.RoleExistsAsync(UserRoles.Admin))
+                    {
+                        await userManager.AddToRoleAsync(user, UserRoles.User);
+                    }
+
+                    response.status = ResponseModel.StatusCodes.success;
+                    response.message = Configs.user_created_msg;
+
+                    return Ok(response);
+                }
+            }
+            catch(Exception e)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, response);
             }
 
-            else
-            {
-                if (!await roleManager.RoleExistsAsync(UserRoles.Admin))
-                {
-                    await roleManager.CreateAsync(new IdentityRole(UserRoles.Admin));
-                }
-                if (!await roleManager.RoleExistsAsync(UserRoles.User))
-                {
-                    await roleManager.CreateAsync(new IdentityRole(UserRoles.User));
-                }
-                if (await roleManager.RoleExistsAsync(UserRoles.Admin))
-                {
-                    await userManager.AddToRoleAsync(user, UserRoles.User);
-                }
-                return Ok(new Response { status = "Success", message = "User Created Successfully" });
-            }
+            
         }
 
     }
